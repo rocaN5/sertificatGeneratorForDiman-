@@ -126,7 +126,7 @@ header .wrapper .cotainer .item a i {
   background-repeat: no-repeat;
   transition: var(--transition);
   background-position: left center;
-  background-image: url("/img/icon.png");
+  background-image: url("img/icon.png");
 }
 header .wrapper .cotainer .item a p {
   font-size: 22px;
