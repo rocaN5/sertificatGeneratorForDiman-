@@ -126,7 +126,7 @@ header .wrapper .cotainer .item a i {
   background-repeat: no-repeat;
   transition: var(--transition);
   background-position: left center;
-  background-image: url("img/icon.png");
+  background-image: url("../img/icon.png");
 }
 header .wrapper .cotainer .item a p {
   font-size: 22px;
@@ -197,7 +197,7 @@ section .wrapper .container .item a .title {
   position: relative;
   width: 100%;
   height: 70%;
-  background-image: url("img/etoBazaGift.png");
+  background-image: url("../img/etoBazaGift.png");
   border-bottom: 1px solid #5c5c5c;
   background-position: center;
   background-size: cover;
