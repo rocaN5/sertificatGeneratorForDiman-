@@ -212,6 +212,24 @@ section .wrapper .container .item a p.description {
   gap: 10px;
 }
 
+*::-webkit-scrollbar-track {
+  background: rgba(177, 177, 177, 0.4666666667);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 6px;
+  transition: 300ms;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #9d9d9d;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }

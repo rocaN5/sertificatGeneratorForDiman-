@@ -2,6 +2,24 @@
 @import 'header';
 @import 'main';
 
+
+*::-webkit-scrollbar-track {
+    background: #b1b1b177;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 6px;
+    transition: 300ms;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background: #9d9d9d;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
 *{
     font-family: "Roboto", sans-serif;
 }
