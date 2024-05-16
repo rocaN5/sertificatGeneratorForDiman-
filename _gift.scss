@@ -1,4 +1,5 @@
 section.gift{
+    top: 130px;
     .wrapper{
         width: 800px;
         aspect-ratio: 16 / 9;
@@ -17,15 +18,16 @@ section.gift{
             border-radius: 10px;
         }
         input{
+            font-weight: 800;
             position: absolute;
             background: transparent;
             border: none;
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
-            width: 29%;
+            width: 30%;
             text-align: center;
-            font-size: 10px;
+            font-size: 12px;
             &.nameGift{
                 top: calc(57% + 3px);
             }
@@ -38,9 +40,39 @@ section.gift{
             &:hover,
             &:focus-within{
                 outline: none;
-                border: none;
-                background: transparent;
                 backdrop-filter: brightness(.8);
+            }
+        }
+    }
+    .generate{
+        font-size: 20px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: 600;
+        padding: 30px 40px;
+        box-shadow: 0px 2px 6px 0px #000;
+        background: rgba(16, 16, 16, 0.1490196078);
+        backdrop-filter: blur(4px) brightness(0.8);
+        border: 2px solid rgba(154, 154, 154, 0.1294117647);
+        cursor: pointer;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        --transition: 200ms;
+        transition: var(--transition);
+        &:hover,
+        &:focus-visible{
+            transition: var(--transition) ease-in-out;
+            box-shadow: 0px 2px 6px 0px #000;
+            background: #000;
+            outline: none;
+            i{
+                filter: drop-shadow(0px 0px 8px #000);
+                transition: var(--transition);
             }
         }
     }

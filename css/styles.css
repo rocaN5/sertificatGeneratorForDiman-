@@ -289,6 +289,9 @@ section .wrapper .container .item a i.emptyIcon {
   filter: drop-shadow(0px 0px 9px #00e2b2);
 }
 
+section.gift {
+  top: 130px;
+}
 section.gift .wrapper {
   width: 800px;
   aspect-ratio: 16/9;
@@ -308,15 +311,16 @@ section.gift .wrapper img {
   border-radius: 10px;
 }
 section.gift .wrapper input {
+  font-weight: 800;
   position: absolute;
   background: transparent;
   border: none;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  width: 29%;
+  width: 30%;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 section.gift .wrapper input.nameGift {
   top: calc(57% + 3px);
@@ -329,9 +333,38 @@ section.gift .wrapper input.courseGift {
 }
 section.gift .wrapper input:hover, section.gift .wrapper input:focus-within {
   outline: none;
-  border: none;
-  background: transparent;
   backdrop-filter: brightness(0.8);
+}
+section.gift .generate {
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding: 30px 40px;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: rgba(16, 16, 16, 0.1490196078);
+  backdrop-filter: blur(4px) brightness(0.8);
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  cursor: pointer;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  --transition: 200ms;
+  transition: var(--transition);
+}
+section.gift .generate:hover, section.gift .generate:focus-visible {
+  transition: var(--transition) ease-in-out;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: #000;
+  outline: none;
+}
+section.gift .generate:hover i, section.gift .generate:focus-visible i {
+  filter: drop-shadow(0px 0px 8px #000);
+  transition: var(--transition);
 }
 
 *::-webkit-scrollbar-track {

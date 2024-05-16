@@ -91,3 +91,37 @@ setInterval(() => {
 
 // Начать анимацию
 animate();
+
+// !!!!!!
+document.querySelector('.generate').addEventListener('click', function() {
+    const imageHolder = document.querySelector('.imageHolder');
+    const scale = 4; // Increase the scale for better quality
+
+    // Получаем текущую дату и время
+    const now = new Date();
+    const formattedDate = now.toISOString().replace(/:/g, '-').replace('T', '_').split('.')[0];
+    const fileName = `Подарочный сертификат ${formattedDate}.png`;
+
+    html2canvas(imageHolder, {
+      scale: scale,
+      useCORS: true, // Allows cross-origin images to be loaded
+      logging: true, // Enable logging for debugging
+      letterRendering: true // Ensures letter rendering
+    }).then(canvas => {
+      // Создаем новое canvas с нужным разрешением
+      const finalCanvas = document.createElement('canvas');
+      finalCanvas.width = 5192;
+      finalCanvas.height = 2898;
+      const ctx = finalCanvas.getContext('2d');
+
+      // Масштабируем изображение
+      ctx.drawImage(canvas, 0, 0, finalCanvas.width, finalCanvas.height);
+
+      // Конвертируем canvas в blob и скачиваем
+      finalCanvas.toBlob(function(blob) {
+        saveAs(blob, fileName);
+      }, 'image/png', 1.0); // Сохраняем изображение с максимальным качеством
+    }).catch(function(error) {
+      console.error('Error generating image:', error);
+    });
+  });
