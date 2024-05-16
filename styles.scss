@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'header';
 @import 'main';
+@import 'gift';
 
 
 *::-webkit-scrollbar-track {
@@ -45,4 +46,12 @@ canvas{
     background-size: 100%;
     background-repeat: no-repeat;
     background: repeating-linear-gradient(0deg, #000000a3, transparent);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent !important;
 }

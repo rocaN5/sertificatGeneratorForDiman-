@@ -178,6 +178,7 @@ section .wrapper .container .item {
 section .wrapper .container .item:hover, section .wrapper .container .item:focus-visible, section .wrapper .container .item:has(a:hover, a:focus-visible) {
   box-shadow: 0px 0px 0px 4px #007d62;
   transition: 200ms;
+  transform: translateY(-2px);
   border: 1px solid #007d62;
 }
 section .wrapper .container .item .loader {
@@ -288,6 +289,51 @@ section .wrapper .container .item a i.emptyIcon {
   filter: drop-shadow(0px 0px 9px #00e2b2);
 }
 
+section.gift .wrapper {
+  width: 800px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  backdrop-filter: blur(4px) brightness(0.8);
+  background: rgba(16, 16, 16, 0.1490196078);
+  box-shadow: 0px 2px 6px 0px #000;
+}
+section.gift .wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+section.gift .wrapper input {
+  position: absolute;
+  background: transparent;
+  border: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 29%;
+  text-align: center;
+  font-size: 10px;
+}
+section.gift .wrapper input.nameGift {
+  top: calc(57% + 3px);
+}
+section.gift .wrapper input.costGift {
+  top: calc(64% + 4px);
+}
+section.gift .wrapper input.courseGift {
+  top: calc(71% + 6px);
+}
+section.gift .wrapper input:hover, section.gift .wrapper input:focus-within {
+  outline: none;
+  border: none;
+  background: transparent;
+  backdrop-filter: brightness(0.8);
+}
+
 *::-webkit-scrollbar-track {
   background: rgba(177, 177, 177, 0.4666666667);
 }
@@ -332,3 +378,11 @@ canvas {
   background-repeat: no-repeat;
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.6392156863), transparent);
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent !important;
+}/*# sourceMappingURL=styles.css.map */
