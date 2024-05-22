@@ -21,6 +21,10 @@
     width: 4px;
 }
 
+*::selection {
+    background: #00c69b;
+}
+
 *{
     font-family: "Roboto", sans-serif;
 }

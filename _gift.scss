@@ -1,78 +1,224 @@
 section.gift{
     top: 130px;
     .wrapper{
-        width: 800px;
-        aspect-ratio: 16 / 9;
         overflow: hidden;
         padding: 20px;
         position: relative;
         border-radius: 20px;
-        border: 2px solid rgba(154, 154, 154, 0.1294117647);
+        border: 2px solid #9a9a9a21;
         backdrop-filter: blur(4px) brightness(0.8);
-        background: rgba(16, 16, 16, 0.1490196078);
+        background: #10101026;
         box-shadow: 0px 2px 6px 0px #000;
-        img{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-        input{
-            font-weight: 800;
-            position: absolute;
-            background: transparent;
-            border: none;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            width: 30%;
-            text-align: center;
-            font-size: 12px;
-            &.nameGift{
-                top: calc(57% + 3px);
-            }
-            &.costGift{
-                top: calc(64% + 4px);
-            }
-            &.courseGift{
-                top: calc(71% + 6px);
-            }
-            &:hover,
-            &:focus-within{
-                outline: none;
-                backdrop-filter: brightness(.8);
-            }
-        }
-    }
-    .generate{
-        font-size: 20px;
         display: flex;
-        position: absolute;
+        gap: 50px;
         justify-content: center;
         align-items: center;
-        border-radius: 20px;
-        color: #fff;
-        font-weight: 600;
-        padding: 30px 40px;
-        box-shadow: 0px 2px 6px 0px #000;
-        background: rgba(16, 16, 16, 0.1490196078);
-        backdrop-filter: blur(4px) brightness(0.8);
-        border: 2px solid rgba(154, 154, 154, 0.1294117647);
-        cursor: pointer;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        --transition: 200ms;
-        transition: var(--transition);
-        &:hover,
-        &:focus-visible{
-            transition: var(--transition) ease-in-out;
-            box-shadow: 0px 2px 6px 0px #000;
-            background: #000;
-            outline: none;
-            i{
-                filter: drop-shadow(0px 0px 8px #000);
-                transition: var(--transition);
+        .dataForm{
+            position: relative;
+            left: 1.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 40px;
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(154, 154, 154, 0.1294117647);
+            background: rgb(0 0 0 / 20%);
+            box-shadow: 0 2px 6px 0 #000;
+            form{
+                display: flex;
+                flex-flow: column;
+                gap: 20px;
+                .inputContainer{
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    input.dataInput{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        background: #00000080;
+                        width: 250px;
+                        position: relative;
+                        color: #fff;
+                        padding: 10px;
+                        height: 30px;
+                        border-radius: 20px;
+                        border: 2px solid #9a9a9a21;
+                        box-shadow: 0px 2px 6px 0px #000;
+                        &::-webkit-input-placeholder{
+                            color: transparent;
+                        }
+                    }
+                    .dataInputLabel{
+                        color: #fff;
+                        position: absolute;
+                        text-align: center;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: 0px 8px;
+                        background: transparent;
+                        border-radius: 20px;
+                        border: 2px solid transparent;
+                        top: 50%;
+                        cursor: auto;
+                        transition: 100ms;
+                        pointer-events: none;
+                        width: max-content;
+                        user-select: none;
+                    }
+                    
+                    input.dataInput:placeholder-shown{
+                        user-select: none;
+                    }
+                    input.dataInput:focus,
+                    input.dataInput:focus-visible,
+                    input.dataInput:not(:placeholder-shown){
+                        border: 2px solid #fff;
+                        outline: none;
+                    }
+                    
+                    input.dataInput:focus ~ label,
+                    input.dataInput:not(:placeholder-shown) ~ .dataInputLabel {
+                        transform: translate(-50%, -50%);
+                        padding: 0px 18px;
+                        background: rgb(0, 0, 0);
+                        border-radius: 20px;
+                        border: 2px solid #ffffff;
+                        transition: 100ms;
+                        font-size: 14px;
+                        top: 100%;
+                    }
+
+                    &:has(input.dataInput:focus,
+                    input.dataInput:focus-visible,
+                    input.dataInput:not(:placeholder-shown)) .deleteInput{
+                        opacity: 1;
+                        transition: var(--transition);
+                        display: flex;
+                    }
+
+                    .deleteInput{
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        font-size: 12px;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        border: 2px solid #fff;
+                        border-radius: 50%;
+                        background: #07080a;
+                        right: 0;
+                        top: 50%;
+                        transform: translate(50%, -50%);
+                        cursor: pointer;
+                        opacity: 0;
+                        transition: var(--transition);
+                        display: none;
+                    }
+                }
+            }
+            .submitContainer{
+                display: flex;
+                gap: 10px;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+                .generate,
+                .send{
+                    font-size: 20px;
+                    display: flex;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    color: #fff;
+                    font-weight: 600;
+                    padding: 20px 20px;
+                    box-shadow: 0px 2px 6px 0px #000;
+                    background: #007c61;
+                    backdrop-filter: blur(4px) brightness(0.8);
+                    border: 2px solid rgb(0 157 121);
+                    cursor: pointer;
+                    --transition: 200ms;
+                    transition: var(--transition);
+                    width: 80%;
+                    gap: 10px;
+                    &:hover,
+                    &:focus-visible{
+                        transition: var(--transition) ease-in-out;
+                        box-shadow: 0px 2px 6px 0px #000;
+                        background: #000;
+                        outline: none;
+                    }
+                }
+                .send{
+                    background: #29A1DD;
+                    border-color: #59bcee;
+                    &::before{
+                        content: "Как вариант, если нужно.\AСейчас не работает 😐";
+                        display: flex;
+                        position: absolute;
+                        font-size: 12px;
+                        background: #00000080;
+                        backdrop-filter: blur(4px);
+                        border: 2px solid #59bcee;
+                        padding: 10px 20px;
+                        white-space: pre;
+                        border-radius: 20px;
+                        top: 140%;
+                        opacity: 0;
+                        transition: var(--transition);
+                        visibility: hidden;
+                        pointer-events: none;
+                    }
+                    &:hover::before,
+                    &:focus::before,
+                    &:focus-visible::before{
+                        opacity: 1;
+                        transition: var(--transition);
+                        top: 120%;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .imageHolder{
+            position: relative;
+            img{
+                position: relative;
+                width: 100%;
+                border-radius: 10px;
+                aspect-ratio: 16 / 9;
+                pointer-events: none;
+                user-select: none;
+            }
+            .inputData{
+                font-weight: 800;
+                position: absolute;
+                background: transparent;
+                border: none;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                width: 31%;
+                text-align: center;
+                font-size: 12px;
+                height: 16px;
+                border-radius: 20px;
+                &.nameGift{
+                    top: calc(57% + 3px);
+                }
+                &.costGift{
+                    top: calc(65% + 2px);
+                }
+                &.courseGift{
+                    top: calc(73% + 2px);
+                }
             }
         }
     }

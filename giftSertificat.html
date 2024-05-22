@@ -32,7 +32,7 @@
                     </a>
                 </div>
                 <div class="item developer">
-                    <a href="https://github.com/rocaN5" class="developer" target="_blank">
+                    <a href="https://rocan5.github.io/contacts/" class="developer" target="_blank">
                         <p>Разработчик</p>
                         <i></i>
                     </a>
@@ -42,18 +42,44 @@
     </header>
     <section class="gift">
         <div class="wrapper">
+            <div class="dataForm">
+                <form>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput nameGiftInput" autocomplete="off" id="name" name="name" placeholder="ФИО" maxlength="36">
+                        <label html="name" class="dataInputLabel">ФИО</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput costGiftInput" autocomplete="off" id="cost" name="cost" placeholder="Сумма" maxlength="36">
+                        <label html="cost" class="dataInputLabel">Сумма</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput courseGiftInput" autocomplete="off" id="course" name="course" placeholder="Название курса" maxlength="36">
+                        <label html="course" class="dataInputLabel">Название курса</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                </form>
+                <div class="submitContainer">
+                    <button class="generate">Скачать<i class="fa-solid fa-file-arrow-down"></i></button>
+                    <button class="send">Отправить<i class="fa-brands fa-telegram"></i></button>
+                </div>
+            </div>
             <div class="imageHolder">
                 <img src="img/etoBazaGift.png">
-                <input class="nameGift" type="text">
-                <input class="costGift" type="text">
-                <input class="courseGift" type="text">
+                <!-- <input class="nameGift" type="text"> -->
+                <div class="inputData nameGift"></div>
+                <!-- <input class="costGift" type="text"> -->
+                <div class="inputData costGift"></div>
+                <!-- <input class="courseGift" type="text"> -->
+                <div class="inputData courseGift"></div>
             </div>
         </div>
-        <button class="generate">Создать</button>
     </section>
     <script src="script.js"></script>
+    <script src="gift.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/ffceda30b6.js" crossorigin="anonymous"></script>
 </body>
 </html>

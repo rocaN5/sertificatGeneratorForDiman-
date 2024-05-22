@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -293,8 +294,6 @@ section.gift {
   top: 130px;
 }
 section.gift .wrapper {
-  width: 800px;
-  aspect-ratio: 16/9;
   overflow: hidden;
   padding: 20px;
   position: relative;
@@ -303,14 +302,192 @@ section.gift .wrapper {
   backdrop-filter: blur(4px) brightness(0.8);
   background: rgba(16, 16, 16, 0.1490196078);
   box-shadow: 0px 2px 6px 0px #000;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
-section.gift .wrapper img {
+section.gift .wrapper .dataForm {
+  position: relative;
+  left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px 0 #000;
+}
+section.gift .wrapper .dataForm form {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+section.gift .wrapper .dataForm form .inputContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+section.gift .wrapper .dataForm form .inputContainer input.dataInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5019607843);
+  width: 250px;
+  position: relative;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  box-shadow: 0px 2px 6px 0px #000;
+}
+section.gift .wrapper .dataForm form .inputContainer input.dataInput::-webkit-input-placeholder {
+  color: transparent;
+}
+section.gift .wrapper .dataForm form .inputContainer .dataInputLabel {
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 8px;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  top: 50%;
+  cursor: auto;
+  transition: 100ms;
+  pointer-events: none;
+  width: max-content;
+  user-select: none;
+}
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:placeholder-shown {
+  user-select: none;
+}
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:focus,
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:focus-visible,
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:not(:placeholder-shown) {
+  border: 2px solid #fff;
+  outline: none;
+}
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:focus ~ label,
+section.gift .wrapper .dataForm form .inputContainer input.dataInput:not(:placeholder-shown) ~ .dataInputLabel {
+  transform: translate(-50%, -50%);
+  padding: 0px 18px;
+  background: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  transition: 100ms;
+  font-size: 14px;
+  top: 100%;
+}
+section.gift .wrapper .dataForm form .inputContainer:has(input.dataInput:focus,
+input.dataInput:focus-visible,
+input.dataInput:not(:placeholder-shown)) .deleteInput {
+  opacity: 1;
+  transition: var(--transition);
+  display: flex;
+}
+section.gift .wrapper .dataForm form .inputContainer .deleteInput {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #07080a;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+  display: none;
+}
+section.gift .wrapper .dataForm .submitContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+section.gift .wrapper .dataForm .submitContainer .generate,
+section.gift .wrapper .dataForm .submitContainer .send {
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding: 20px 20px;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: #007c61;
+  backdrop-filter: blur(4px) brightness(0.8);
+  border: 2px solid rgb(0, 157, 121);
+  cursor: pointer;
+  --transition: 200ms;
+  transition: var(--transition);
+  width: 80%;
+  gap: 10px;
+}
+section.gift .wrapper .dataForm .submitContainer .generate:hover, section.gift .wrapper .dataForm .submitContainer .generate:focus-visible,
+section.gift .wrapper .dataForm .submitContainer .send:hover,
+section.gift .wrapper .dataForm .submitContainer .send:focus-visible {
+  transition: var(--transition) ease-in-out;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: #000;
+  outline: none;
+}
+section.gift .wrapper .dataForm .submitContainer .send {
+  background: #29A1DD;
+  border-color: #59bcee;
+}
+section.gift .wrapper .dataForm .submitContainer .send::before {
+  content: "Как вариант, если нужно.\aСейчас не работает 😐";
+  display: flex;
+  position: absolute;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.5019607843);
+  backdrop-filter: blur(4px);
+  border: 2px solid #59bcee;
+  padding: 10px 20px;
+  white-space: pre;
+  border-radius: 20px;
+  top: 140%;
+  opacity: 0;
+  transition: var(--transition);
+  visibility: hidden;
+  pointer-events: none;
+}
+section.gift .wrapper .dataForm .submitContainer .send:hover::before, section.gift .wrapper .dataForm .submitContainer .send:focus::before, section.gift .wrapper .dataForm .submitContainer .send:focus-visible::before {
+  opacity: 1;
+  transition: var(--transition);
+  top: 120%;
+  visibility: visible;
+}
+section.gift .wrapper .imageHolder {
+  position: relative;
+}
+section.gift .wrapper .imageHolder img {
   position: relative;
   width: 100%;
-  height: 100%;
   border-radius: 10px;
+  aspect-ratio: 16/9;
+  pointer-events: none;
+  user-select: none;
 }
-section.gift .wrapper input {
+section.gift .wrapper .imageHolder .inputData {
   font-weight: 800;
   position: absolute;
   background: transparent;
@@ -318,53 +495,20 @@ section.gift .wrapper input {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  width: 30%;
+  width: 31%;
   text-align: center;
   font-size: 12px;
+  height: 16px;
+  border-radius: 20px;
 }
-section.gift .wrapper input.nameGift {
+section.gift .wrapper .imageHolder .inputData.nameGift {
   top: calc(57% + 3px);
 }
-section.gift .wrapper input.costGift {
-  top: calc(64% + 4px);
+section.gift .wrapper .imageHolder .inputData.costGift {
+  top: calc(65% + 2px);
 }
-section.gift .wrapper input.courseGift {
-  top: calc(71% + 6px);
-}
-section.gift .wrapper input:hover, section.gift .wrapper input:focus-within {
-  outline: none;
-  backdrop-filter: brightness(0.8);
-}
-section.gift .generate {
-  font-size: 20px;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: 600;
-  padding: 30px 40px;
-  box-shadow: 0px 2px 6px 0px #000;
-  background: rgba(16, 16, 16, 0.1490196078);
-  backdrop-filter: blur(4px) brightness(0.8);
-  border: 2px solid rgba(154, 154, 154, 0.1294117647);
-  cursor: pointer;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  --transition: 200ms;
-  transition: var(--transition);
-}
-section.gift .generate:hover, section.gift .generate:focus-visible {
-  transition: var(--transition) ease-in-out;
-  box-shadow: 0px 2px 6px 0px #000;
-  background: #000;
-  outline: none;
-}
-section.gift .generate:hover i, section.gift .generate:focus-visible i {
-  filter: drop-shadow(0px 0px 8px #000);
-  transition: var(--transition);
+section.gift .wrapper .imageHolder .inputData.courseGift {
+  top: calc(73% + 2px);
 }
 
 *::-webkit-scrollbar-track {
@@ -383,6 +527,10 @@ section.gift .generate:hover i, section.gift .generate:focus-visible i {
 
 *::-webkit-scrollbar {
   width: 4px;
+}
+
+*::selection {
+  background: #00c69b;
 }
 
 * {
@@ -418,4 +566,4 @@ button,
 select,
 a {
   -webkit-tap-highlight-color: transparent !important;
-}/*# sourceMappingURL=styles.css.map */
+}
