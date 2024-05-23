@@ -1,18 +1,20 @@
-section.gift{
-    top: 130px;
+section.graduation{
+    top: 120px;
     .wrapper{
+        width: 50%;
         overflow: hidden;
         padding: 20px;
         position: relative;
         border-radius: 20px;
-        border: 2px solid #9a9a9a21;
+        border: 2px solid rgba(154, 154, 154, 0.1294117647);
         backdrop-filter: blur(4px) brightness(0.8);
-        background: #10101026;
+        background: rgba(16, 16, 16, 0.1490196078);
         box-shadow: 0px 2px 6px 0px #000;
         display: flex;
         gap: 50px;
         justify-content: center;
         align-items: center;
+        height: unset;
         .dataForm{
             position: relative;
             left: 1.5%;
@@ -94,13 +96,17 @@ section.gift{
 
                     &:has(input.dataInput:focus,
                     input.dataInput:focus-visible,
-                    input.dataInput:not(:placeholder-shown)) .deleteInput{
+                    input.dataInput:not(:placeholder-shown)) .deleteInput,
+                    &:has(input.dataInput:focus,
+                    input.dataInput:focus-visible,
+                    input.dataInput:not(:placeholder-shown)) .setDateInput{
                         opacity: 1;
                         transition: var(--transition);
                         display: flex;
                     }
 
-                    .deleteInput{
+                    .deleteInput,
+                    .setDateInput{
                         position: absolute;
                         width: 26px;
                         height: 26px;
@@ -118,6 +124,13 @@ section.gift{
                         opacity: 0;
                         transition: var(--transition);
                         display: none;
+                    }
+                    .setDateInput{
+                        opacity: 1;
+                        display: flex;
+                        left: 30px;
+                        transform: translate(-50%, -50%);
+                        border-color: #fff;
                     }
                 }
             }
@@ -192,11 +205,11 @@ section.gift{
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 50%;
             img{
                 position: relative;
                 width: 100%;
                 border-radius: 10px;
-                aspect-ratio: 16 / 9;
                 pointer-events: none;
                 user-select: none;
             }
@@ -208,19 +221,35 @@ section.gift{
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: #fff;
-                width: 31%;
+                width: 70%;
                 text-align: center;
                 font-size: 12px;
                 height: 16px;
                 border-radius: 20px;
-                &.nameGift{
-                    top: calc(57% + 3px);
+                &.nameGrad{
+                    top: calc(49% + 7px);
                 }
-                &.costGift{
-                    top: calc(65% + 2px);
+                &.courseGrad{
+                    top: calc(64% + 7px);
                 }
-                &.courseGift{
-                    top: calc(73% + 2px);
+                &.masterGrad{
+                    top: calc(84% + 0px);
+                    width: 33%;
+                    left: calc(31% + 7px);
+                    font-size: 7px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: end;
+                }
+                &.dateGrad{
+                    top: calc(84% + 2px);
+                    width: 28%;
+                    right: 1%;
+                    left: unset;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    font-size: 10px;
                 }
             }
         }

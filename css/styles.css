@@ -478,6 +478,9 @@ section.gift .wrapper .dataForm .submitContainer .send:hover::before, section.gi
 }
 section.gift .wrapper .imageHolder {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section.gift .wrapper .imageHolder img {
   position: relative;
@@ -509,6 +512,258 @@ section.gift .wrapper .imageHolder .inputData.costGift {
 }
 section.gift .wrapper .imageHolder .inputData.courseGift {
   top: calc(73% + 2px);
+}
+
+section.graduation {
+  top: 120px;
+}
+section.graduation .wrapper {
+  width: 50%;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  backdrop-filter: blur(4px) brightness(0.8);
+  background: rgba(16, 16, 16, 0.1490196078);
+  box-shadow: 0px 2px 6px 0px #000;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: unset;
+}
+section.graduation .wrapper .dataForm {
+  position: relative;
+  left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px 0 #000;
+}
+section.graduation .wrapper .dataForm form {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+section.graduation .wrapper .dataForm form .inputContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5019607843);
+  width: 250px;
+  position: relative;
+  color: #fff;
+  padding: 10px;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(154, 154, 154, 0.1294117647);
+  box-shadow: 0px 2px 6px 0px #000;
+}
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput::-webkit-input-placeholder {
+  color: transparent;
+}
+section.graduation .wrapper .dataForm form .inputContainer .dataInputLabel {
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 8px;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  top: 50%;
+  cursor: auto;
+  transition: 100ms;
+  pointer-events: none;
+  width: max-content;
+  user-select: none;
+}
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:placeholder-shown {
+  user-select: none;
+}
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:focus,
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:focus-visible,
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:not(:placeholder-shown) {
+  border: 2px solid #fff;
+  outline: none;
+}
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:focus ~ label,
+section.graduation .wrapper .dataForm form .inputContainer input.dataInput:not(:placeholder-shown) ~ .dataInputLabel {
+  transform: translate(-50%, -50%);
+  padding: 0px 18px;
+  background: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  transition: 100ms;
+  font-size: 14px;
+  top: 100%;
+}
+section.graduation .wrapper .dataForm form .inputContainer:has(input.dataInput:focus,
+input.dataInput:focus-visible,
+input.dataInput:not(:placeholder-shown)) .deleteInput, section.graduation .wrapper .dataForm form .inputContainer:has(input.dataInput:focus,
+input.dataInput:focus-visible,
+input.dataInput:not(:placeholder-shown)) .setDateInput {
+  opacity: 1;
+  transition: var(--transition);
+  display: flex;
+}
+section.graduation .wrapper .dataForm form .inputContainer .deleteInput,
+section.graduation .wrapper .dataForm form .inputContainer .setDateInput {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #07080a;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+  display: none;
+}
+section.graduation .wrapper .dataForm form .inputContainer .setDateInput {
+  opacity: 1;
+  display: flex;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  border-color: #fff;
+}
+section.graduation .wrapper .dataForm .submitContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+section.graduation .wrapper .dataForm .submitContainer .generate,
+section.graduation .wrapper .dataForm .submitContainer .send {
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding: 20px 20px;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: #007c61;
+  backdrop-filter: blur(4px) brightness(0.8);
+  border: 2px solid rgb(0, 157, 121);
+  cursor: pointer;
+  --transition: 200ms;
+  transition: var(--transition);
+  width: 80%;
+  gap: 10px;
+}
+section.graduation .wrapper .dataForm .submitContainer .generate:hover, section.graduation .wrapper .dataForm .submitContainer .generate:focus-visible,
+section.graduation .wrapper .dataForm .submitContainer .send:hover,
+section.graduation .wrapper .dataForm .submitContainer .send:focus-visible {
+  transition: var(--transition) ease-in-out;
+  box-shadow: 0px 2px 6px 0px #000;
+  background: #000;
+  outline: none;
+}
+section.graduation .wrapper .dataForm .submitContainer .send {
+  background: #29A1DD;
+  border-color: #59bcee;
+}
+section.graduation .wrapper .dataForm .submitContainer .send::before {
+  content: "Как вариант, если нужно.\aСейчас не работает 😐";
+  display: flex;
+  position: absolute;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.5019607843);
+  backdrop-filter: blur(4px);
+  border: 2px solid #59bcee;
+  padding: 10px 20px;
+  white-space: pre;
+  border-radius: 20px;
+  top: 140%;
+  opacity: 0;
+  transition: var(--transition);
+  visibility: hidden;
+  pointer-events: none;
+}
+section.graduation .wrapper .dataForm .submitContainer .send:hover::before, section.graduation .wrapper .dataForm .submitContainer .send:focus::before, section.graduation .wrapper .dataForm .submitContainer .send:focus-visible::before {
+  opacity: 1;
+  transition: var(--transition);
+  top: 120%;
+  visibility: visible;
+}
+section.graduation .wrapper .imageHolder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+section.graduation .wrapper .imageHolder img {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  pointer-events: none;
+  user-select: none;
+}
+section.graduation .wrapper .imageHolder .inputData {
+  font-weight: 800;
+  position: absolute;
+  background: transparent;
+  border: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  font-size: 12px;
+  height: 16px;
+  border-radius: 20px;
+}
+section.graduation .wrapper .imageHolder .inputData.nameGrad {
+  top: calc(49% + 7px);
+}
+section.graduation .wrapper .imageHolder .inputData.courseGrad {
+  top: calc(64% + 7px);
+}
+section.graduation .wrapper .imageHolder .inputData.masterGrad {
+  top: calc(84% + 0px);
+  width: 33%;
+  left: calc(31% + 7px);
+  font-size: 7px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+section.graduation .wrapper .imageHolder .inputData.dateGrad {
+  top: calc(84% + 2px);
+  width: 28%;
+  right: 1%;
+  left: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 10px;
 }
 
 *::-webkit-scrollbar-track {

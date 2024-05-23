@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Создание сертификатов для Димана💖">
+    
+    <title>Сертификат о прохождении курса 📋</title>
+    <meta property="og:description" content="Создание сертификатов для Димана💖">
+
+    <meta property="og:title" content="Сертификат о прохождении курса 📋">
+    <meta property="og:type" content="website">
+
+    <link rel="apple-touch-icon" href="img/icon.ico">
+    <link rel="shortcut icon" href="img/icon.ico">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <header>
+        <div class="wrapper">
+            <div class="cotainer">
+                <div class="item">
+                    <a href="./" class="home">
+                        <i></i>
+                        <p>Генератор для Димана💖</p>
+                    </a>
+                </div>
+                <div class="item developer">
+                    <a href="https://rocan5.github.io/contacts/" class="developer" target="_blank">
+                        <p>Разработчик</p>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="graduation">
+        <div class="wrapper">
+            <div class="dataForm">
+                <form>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput nameGradInput" autocomplete="off" id="name" name="name" placeholder="ФИО" maxlength="36">
+                        <label html="name" class="dataInputLabel">ФИО</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput courseGradInput" autocomplete="off" id="course" name="course" placeholder="Название курса" maxlength="36">
+                        <label html="course" class="dataInputLabel">Название курса</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput masterGradInput" autocomplete="off" id="master" name="master" placeholder="Преподаватель" maxlength="36">
+                        <label html="master" class="dataInputLabel">Преподаватель</label>
+                        <div class="deleteInput"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" class="dataInput dateGradInput" autocomplete="off" id="date" name="date" placeholder="Преподаватель" maxlength="20">
+                        <label html="date" class="dataInputLabel">Выбор даты</label>
+                        <div class="deleteInput dateDelete"><i class="fa-solid fa-trash"></i></div>
+                        <div class="setDateInput"><i class="fa-solid fa-calendar-days"></i></div>
+                    </div>
+                </form>
+                <div class="submitContainer">
+                    <button class="generate">Скачать<i class="fa-solid fa-file-arrow-down"></i></button>
+                    <button class="send">Отправить<i class="fa-brands fa-telegram"></i></button>
+                </div>
+            </div>
+            <div class="imageHolder">
+                <img src="img/etoBazaLevelUp.jpg">
+                <div class="inputData nameGrad"></div>
+                <div class="inputData courseGrad"></div>
+                <div class="inputData masterGrad"></div>
+                <div class="inputData dateGrad"></div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="graduation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://kit.fontawesome.com/ffceda30b6.js" crossorigin="anonymous"></script>
+</body>
+</html>
