@@ -747,13 +747,14 @@ section.graduation .wrapper .imageHolder .inputData.courseGrad {
   top: calc(64% + 7px);
 }
 section.graduation .wrapper .imageHolder .inputData.masterGrad {
-  top: calc(84% + 0px);
+  top: calc(84% + 2px);
   width: 33%;
-  left: calc(31% + 7px);
-  font-size: 7px;
+  right: 1%;
+  left: calc(29% + 0px);
   display: flex;
-  justify-content: start;
-  align-items: end;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 10px;
 }
 section.graduation .wrapper .imageHolder .inputData.dateGrad {
   top: calc(84% + 2px);
